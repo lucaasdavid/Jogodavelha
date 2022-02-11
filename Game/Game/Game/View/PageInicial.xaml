@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Game.View.PageInicial">
+
+    <StackLayout BackgroundColor="#1c76d2">
+        <Grid>
+            <!-- LINHAS -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="130"/>
+                <RowDefinition Height="100 "/>
+                <RowDefinition Height="300"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+             
+            <!-- LOGO GAME -->
+            <StackLayout Grid.Row="0" Margin="30">
+                <Image Source="jogo.png" HeightRequest="200"/>
+            </StackLayout>
+
+            <!-- BUTTON SIGLE PLAYER -->
+            <StackLayout Grid.Row="2"  Padding="20,0">
+                <Label Text="Escolha uma opção abaixo:"
+                       FontSize="25"
+                       FontAttributes="Bold"
+                       TextColor="FloralWhite"
+                       Padding="0,0,0,20"
+                       HorizontalTextAlignment="Center"/>
+                <Frame x:Name="SinglePLayer"
+                       HorizontalOptions="FillAndExpand"
+                       IsClippedToBounds="True"
+                       BackgroundColor="#febd00"
+                       Padding="0"
+                       HeightRequest="50"
+                       CornerRadius="8">
+                    <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="CenterAndExpand">
+                        <Image Source="sozinho1.png"
+                               Margin="10"/>
+                    </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                
+                <!-- BUTTON MULTIPLAYER -->
+                <Frame x:Name="MULTIPLAYER"
+                       HorizontalOptions="FillAndExpand"
+                       IsClippedToBounds="True"
+                       BackgroundColor="#febd00"
+                       Padding="0"
+                       HeightRequest="50"
+                       CornerRadius="8">
+                    <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="CenterAndExpand">
+                        <Image Source="amigo2.png"
+                               Margin="10"/>
+                    </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" Command="{Binding Multiplayer}"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                
+                <!-- BUTTON FACEBOOK -->
+                <Frame x:Name="Facebook"
+                       HorizontalOptions="FillAndExpand"
+                       IsClippedToBounds="True"
+                       BackgroundColor="#4267B2"
+                       Padding="0"
+                       HeightRequest="50"
+                       CornerRadius="8">
+                    <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="CenterAndExpand">
+                        <Label Text="NOSSO FACEBOOK" 
+                               TextColor="FloralWhite" 
+                               FontSize="20" 
+                               HorizontalTextAlignment="Center"
+                               VerticalTextAlignment="Center"/>
+                        <Image Source="face.png"/>
+                    </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </StackLayout>
+            
+            <!-- BUTTON DE SOM -->
+            <StackLayout Grid.Row="3" Orientation="Horizontal" HorizontalOptions="StartAndExpand" Padding="10,10">
+                <Frame x:Name="Sound"
+                       HorizontalOptions="End"
+                       IsClippedToBounds="True"
+                       BackgroundColor="#1c76d2">
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="som.png"/>
+                    </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                <!-- BUTTON DE SETTINGS -->
+                <Frame x:Name="settings"
+                       HorizontalOptions="Start"
+                       IsClippedToBounds="True"
+                       BackgroundColor="#1c76d2">
+                    <StackLayout Orientation="Horizontal" Spacing="5" HorizontalOptions="CenterAndExpand">
+                        <Image Source="eng.png"></Image>
+                    </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_4"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>

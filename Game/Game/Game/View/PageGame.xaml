@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             x:Class="Game.View.PageGame">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#1c76d2">
+            <Grid>
+                <!-- LINHAS PRINCIPAL -->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="130"/>
+                    <RowDefinition Height="370"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="90"/>
+                </Grid.RowDefinitions>
+                <!-- COLUNAS PRINCIPAL -->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="65"/>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="65"/>
+                </Grid.ColumnDefinitions>
+                
+                <!-- LAYOUT DO GAME, LINHAS E COLUNAS-->
+                <Frame x:Name="LayoutGame"
+                           Grid.Row="1" 
+                           Grid.ColumnSpan="5"
+                           HorizontalOptions="FillAndExpand"
+                           IsClippedToBounds="True"
+                           BackgroundColor="#febd00"
+                           Margin="10"
+                           CornerRadius="10">
+                    
+                    <Grid Padding="0,10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="93"/>
+                            <RowDefinition Height="93"/>
+                            <RowDefinition Height="93"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="1"/>
+                            <ColumnDefinition Width="90"/>
+                            <ColumnDefinition Width="1"/>
+                            <ColumnDefinition Width="90"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackLayout Grid.Row="0" Grid.ColumnSpan="5" Grid.RowSpan="3">
+                            <Frame BackgroundColor="FloralWhite"
+                                   HeightRequest="400"
+                                   WidthRequest="400"
+                                   CornerRadius="10"/>
+                        </StackLayout>
+
+                        <!-- LINHAS DO JOGO -->
+                        <StackLayout Grid.Row="1" Grid.ColumnSpan="5">
+                            <Rectangle HeightRequest="1"                                     
+                                       BackgroundColor="Black"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="2" Grid.ColumnSpan="5">
+                            <Rectangle HeightRequest="1"
+                                       BackgroundColor="Black"/>
+                        </StackLayout>
+                         
+                        <!--#region LAYOUT DO GAME, LINAS E COLUNAS -->
+                        <StackLayout Grid.Row="0" Grid.RowSpan="3" Grid.Column="1" Padding="0,3">
+                            <Rectangle HeightRequest="86"
+                                       BackgroundColor="Black"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="1" Grid.Column="1" Padding="0,10">
+                            <Rectangle HeightRequest="80"
+                                       BackgroundColor="Black"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="2" Grid.Column="1" Padding="0,10">
+                            <Rectangle HeightRequest="80"
+                                       BackgroundColor="Black"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="0" Grid.Column="3" Padding="0,3">
+                            <Rectangle HeightRequest="86"
+                                       BackgroundColor="Black"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="1" Grid.Column="3" Padding="0,10">
+                            <Rectangle HeightRequest="80"
+                                       BackgroundColor="Black"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="2" Grid.Column="3" Padding="0,10">
+                            <Rectangle HeightRequest="80"
+                                       BackgroundColor="Black"/>
+                        </StackLayout>
+                        <!--#endregion-->
+                
+                        <!--#region IMG BUTTONS CLICK -->
+                       <StackLayout Grid.Row="0" Grid.Column="0" Padding="0,5">
+                            <Button x:Name="btn1"
+                                    FontSize="60"
+                                    BackgroundColor="FloralWhite"
+                                    HeightRequest="85"
+                                    Clicked="button_Clicked"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="0" Grid.Column="2" Padding="0,5">
+                            <Button x:Name="btn2"
+                                    FontSize="60"
+                                    BackgroundColor="FloralWhite"
+                                    HeightRequest="85"
+                                    Clicked="button_Clicked"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="0" Grid.Column="4" Padding="0,5">
+                            <Button x:Name="btn3"
+                                    FontSize="60"
+                                    BackgroundColor="FloralWhite"
+                                    HeightRequest="85"
+                                    Clicked="button_Clicked"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="1" Grid.Column="0" Padding="0,5">
+                            <Button x:Name="btn4"
+                                    FontSize="60"
+                                    BackgroundColor="FloralWhite"
+                                    HeightRequest="85"
+                                    Clicked="button_Clicked"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="1" Grid.Column="2" Padding="0,5">
+                            <Button x:Name="btn5"
+                                    FontSize="60"
+                                    BackgroundColor="FloralWhite"
+                                    HeightRequest="85"
+                                    Clicked="button_Clicked"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="1" Grid.Column="4" Padding="0,5">
+                            <Button x:Name="btn6"
+                                    FontSize="60"
+                                    BackgroundColor="FloralWhite"
+                                    HeightRequest="85"
+                                    Clicked="button_Clicked"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="2" Grid.Column="0" Padding="0,5">
+                            <Button x:Name="btn7"
+                                    FontSize="60"
+                                    BackgroundColor="FloralWhite"
+                                    HeightRequest="85"
+                                    Clicked="button_Clicked"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="2" Grid.Column="2" Padding="0,5">
+                            <Button x:Name="btn8"
+                                    FontSize="60"
+                                    BackgroundColor="FloralWhite"
+                                    HeightRequest="85"
+                                    Clicked="button_Clicked"/>
+                        </StackLayout>
+                        <StackLayout Grid.Row="2" Grid.Column="4" Padding="0,5">
+                            <Button x:Name="btn9"
+                                    FontSize="60"
+                                    BackgroundColor="FloralWhite"
+                                    HeightRequest="85"
+                                    Clicked="button_Clicked"/>
+                        </StackLayout>
+                    </Grid>
+                    </Frame>
+                <StackLayout Grid.Row="2" Grid.Column="2" Orientation="Vertical" VerticalOptions="Center">
+                    <Image Source="rodadas.png"/>
+                </StackLayout>
+                <StackLayout Grid.Row="2" Grid.Column="3" Orientation="Horizontal">
+                    <Frame BackgroundColor="#145496"
+                           HeightRequest="10"
+                           WidthRequest="10"
+                           CornerRadius="5">
+                        <Label x:Name="RodadasN"
+                               FontSize="11"
+                               HorizontalTextAlignment="Center"
+                               TextColor="White">1</Label>
+                    </Frame>
+                </StackLayout>
+                <!-- PLACAR + IMG "VS" -->
+                <StackLayout Grid.Row="0" Grid.Column="2" Spacing="-40" Padding="0,15">
+                    <Image Source="placar.png"/>
+                     <Image Source="vs.png"/>
+                </StackLayout>
+                <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Padding="30,0,30,0" Margin="3">
+                </StackLayout>
+                <StackLayout Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="3" Padding="30,0,50,0" Margin="35">
+                </StackLayout>
+                <StackLayout Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+                    <Frame x:Name="placar1"
+                           HorizontalOptions="FillAndExpand"
+                           BackgroundColor="#145496"
+                           Margin="15"
+                           HeightRequest="400"
+                           CornerRadius="8">
+                        <Label x:Name="placarX"
+                               FontSize="40"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="Center"
+                               TextColor="White">0</Label>
+                    </Frame>
+                </StackLayout>
+                <StackLayout  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalOptions="End" Padding="0,35">
+                    <Image Source="x.png"
+                           Margin="45"/>
+                </StackLayout>
+                
+                <StackLayout Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2">
+                    <Frame x:Name="placar2"
+                           HorizontalOptions="FillAndExpand"
+                           IsClippedToBounds="True"
+                           BackgroundColor="#145496"
+                           Margin="15"
+                           HeightRequest="400"
+                           CornerRadius="8">
+                        <Label x:Name="placarBola"
+                               FontSize="40"
+                               FontAttributes="Bold"
+                               HorizontalTextAlignment="Center"
+                               TextColor="White">0</Label>
+                    </Frame>
+                </StackLayout>
+                <StackLayout Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Padding="0,35">
+                    <Image Source="o.png"
+                           Margin="44"/>
+                </StackLayout>
+
+                <!-- BUTTONS, PLAY INSTRUÇÕES E RESETGAME -->
+                <StackLayout Grid.Row="3" Orientation="Horizontal" Grid.Column="0" Grid.ColumnSpan="5" Margin="10">
+                    <Frame x:Name="Play"
+                           IsClippedToBounds="True"
+                           Background="#ffae05"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           HeightRequest="50"
+                           CornerRadius="8">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                            <Label Text="MENU" 
+                                   TextColor="FloralWhite" 
+                                   FontAttributes="Bold"
+                                   FontSize="21" 
+                                   VerticalTextAlignment="Center"/>
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="PlayEvent_Tapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <StackLayout Grid.Row="3">
+                        <Frame x:Name="Instruncoes"
+                               IsClippedToBounds="True"
+                               Background="#ffae05"
+                               HorizontalOptions="CenterAndExpand"
+                               VerticalOptions="CenterAndExpand"
+                               HeightRequest="50"
+                               CornerRadius="8">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                <Label Text="COMO JOGAR?" 
+                                       TextColor="FloralWhite" 
+                                       FontSize="21"
+                                       FontAttributes="Bold"
+                                       VerticalTextAlignment="Center"/>
+                            </StackLayout>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="InstrucEvent_Tapped" Command="{Binding ComoJogar}"/>
+                            </Frame.GestureRecognizers>
+                        </Frame>
+                    </StackLayout>
+                    <Frame x:Name="ReloadGame"
+                           IsClippedToBounds="True"
+                           Background="#ffae05"
+                           HorizontalOptions="CenterAndExpand"
+                           VerticalOptions="CenterAndExpand"
+                           CornerRadius="8">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                            <Image Source="restart.png"/>
+                        </StackLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ReloadEvent_Tapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

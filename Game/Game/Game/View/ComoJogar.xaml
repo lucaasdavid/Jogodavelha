@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Game.View.ComoJogar">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#1c76d2">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="190"/>
+                    <RowDefinition Height="320"/>
+                </Grid.RowDefinitions>
+
+                <StackLayout Grid.Row="0" Margin="40">
+                    <Image Source="regras.png"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center"/>
+                </StackLayout>
+                <StackLayout Grid.Row="1">
+                    <Frame
+                        VerticalOptions="FillAndExpand"
+                        BackgroundColor="FloralWhite"
+                        Margin="10"
+                        CornerRadius="10"/>
+                </StackLayout>
+                <StackLayout Grid.Row="1" Margin="13">
+                    <Label Text="1. O objetivo do jogo é fazer uma sequência de três símbolos iguais, seja em linha vertical, horizontal ou diagonal, enquanto tenta impedir que seu adversário faça o mesmo; 2. Quando um dos participantes faz uma linha, ganha o jogo; 3. Começa do início, normalmente trocando os símbolos escolhidos."
+                           Padding="15,10"
+                           TextColor="Black"
+                           FontSize="25"/>
+                </StackLayout>
+
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
